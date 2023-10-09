@@ -8,11 +8,13 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
 
     --ff-regular: 'Outfit', sans-serif;
-    --fs-regular: 18px;
+    --fs-regular: 16px;
 
     --fw-bold: 600;
     --fw-regular: 400;
     --fw-light: 300;
+
+    --border-radius: .5rem;
 }
 
 *,
@@ -41,7 +43,13 @@ body {
 }
 
 .nft-component {
+    margin: 3.5rem 1.5rem;
+    padding: 1rem;
     background: var(--clr-neutral-700);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: var(--border-radius);
 }
 
 h1.title {
@@ -52,17 +60,116 @@ h1.title {
 
 .nft-section > span {
     color: var(--clr-primary-400);
+    font-weight: var(--fw-bold);
 }
 
 .creator-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 1rem;
     font-weight: var(--fw-light);
 }
 
-.creator-section > span {
+.icons-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-section > * {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.creator-section > img {
+    height: 28px;
+    width: 28px;
+    border: 1px solid var(--clr-neutral-100);
+    border-radius: 50%;
+}
+
+.creator-section > p > span {
     color: var(--clr-neutral-100);
 }
 
 hr {
     border: 1px solid var(--clr-neutral-600);
+}
+
+.imgages-section {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.imgages-section > img {
+    border-radius: var(--border-radius);
+}
+
+.view-svg {
+    position: absolute;
+    display: none;
+}
+
+.creator-section > p > span:hover {
+    color: var(--clr-primary-400);
+    cursor: pointer;
+}
+
+.imgages-section:hover {
+    background: var(--clr-primary-400);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.imgages-section:hover img {
+    opacity: .5;
+}
+
+.imgages-section:hover .view-svg {
+    display: block;
+}
+
+h1.title:hover {
+    color: var(--clr-primary-400);
+    cursor: pointer;
+}
+
+main {
+    position: relative;
+}
+
+.shadow-div-1 {
+    position: absolute;
+    z-index: -1;
+    background: #0C1729;
+    top: 4rem;
+    left: .5rem;
+    width: 20rem;
+    height: 32rem;
+    border-radius: 3rem;
+}
+
+.shadow-div-2 {
+    background: #0b182a;
+    position: absolute;
+    z-index: -2;
+    top: 2rem;
+    left: -1rem;
+    width: 23rem;
+    height: 35rem;
+    border-radius: 3rem;
+}
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .nft-component {
+        max-width: 18rem;
+    }
 }
