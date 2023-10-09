@@ -9,7 +9,7 @@
 
     --ff-regular: 'Outfit', sans-serif;
     --fs-regular: 18px;
-    
+
     --fw-bold: 600;
     --fw-regular: 400;
     --fw-light: 300;
@@ -30,4 +30,39 @@ img,
 svg {
     display: block;
     max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-regular);
+    font-size: var(--fs-regular);
+    color: var(--clr-primary-200);
+    font-weight: var(--fw-regular);
+    background: var(--clr-neutral-900);
+}
+
+.nft-component {
+    background: var(--clr-neutral-700);
+}
+
+h1.title {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+}
+
+.nft-section > span {
+    color: var(--clr-primary-400);
+}
+
+.creator-section {
+    font-size: 1rem;
+    font-weight: var(--fw-light);
+}
+
+.creator-section > span {
+    color: var(--clr-neutral-100);
+}
+
+hr {
+    border: 1px solid var(--clr-neutral-600);
 }
